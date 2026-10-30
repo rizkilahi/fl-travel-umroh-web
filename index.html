@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Al-Barakah Travel Umroh & Haji | Melayani Tamu Allah Sepenuh Hati</title>
+  <meta name="description" content="Biro perjalanan Umroh dan Haji Khusus resmi Kemenag RI. Paket Umroh Bintang 5, Umroh Plus Turki, dan Haji Furoda tanpa antri dengan hotel pelataran Masjidil Haram.">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom Style -->
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            emerald: {
+              850: '#064e3b',
+              950: '#022c22',
+            },
+            amber: {
+              450: '#f59e0b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased flex flex-col min-h-screen">
+
+  <!-- Top Banner Legalitas -->
+  <div class="bg-emerald-950 text-emerald-200 text-xs py-2 px-4 border-b border-emerald-900">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-2 text-center sm:text-left">
+        <span class="bg-amber-500 text-stone-900 font-bold px-2 py-0.5 rounded text-[10px] uppercase">Resmi Kemenag RI</span>
+        <span class="travel-license font-medium">PPIU No. U.384 / 2021 &amp; PIHK No. 128 / 2023</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs font-semibold">
+        <a href="tel:+6281234567890" class="hover:text-amber-400 transition"><i class="fas fa-phone-alt mr-1 text-amber-400"></i> <span class="travel-phone">+62 812-3456-7890</span></a>
+        <span class="hidden md:inline">|</span>
+        <span class="hidden md:inline"><i class="fas fa-shield-alt mr-1 text-amber-400"></i> 5 Pasti Umroh Terjamin</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="sticky top-0 z-40 glass-header border-b border-stone-200/80 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-emerald-800 to-emerald-950 flex items-center justify-center text-amber-400 shadow-md group-hover:scale-105 transition">
+          <i class="fas fa-kaaba text-xl"></i>
+        </div>
+        <div>
+          <span class="travel-name block font-black text-xl text-emerald-950 tracking-tight leading-none">Al-Barakah Travel</span>
+          <span class="text-[11px] font-semibold text-amber-600 uppercase tracking-widest leading-tight">Umroh &amp; Haji Khusus</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-8 font-semibold text-sm text-stone-600">
+        <a href="#home" class="hover:text-emerald-800 transition py-1">Beranda</a>
+        <a href="#about" class="hover:text-emerald-800 transition py-1">Tentang Kami</a>
+        <a href="#paket" class="hover:text-emerald-800 transition py-1">Pilihan Paket</a>
+        <a href="#jadwal" class="hover:text-emerald-800 transition py-1">Jadwal Keberangkatan</a>
+        <a href="#testimoni" class="hover:text-emerald-800 transition py-1">Testimoni</a>
+        <a href="#galeri" class="hover:text-emerald-800 transition py-1">Galeri &amp; Video</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="#paket" class="px-5 py-2.5 rounded-xl bg-emerald-800 hover:bg-emerald-900 text-white font-bold text-sm shadow-md hover:shadow-lg transition flex items-center gap-2">
+          <i class="fas fa-ticket-alt text-amber-400"></i> Booking Sekarang
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="lg:hidden text-stone-700 hover:text-emerald-900 text-2xl p-2 focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-nav" class="hidden lg:hidden bg-white border-b border-stone-200 px-6 py-4 space-y-3 font-semibold text-sm shadow-xl">
+      <a href="#home" class="block text-stone-700 hover:text-emerald-800 py-1">Beranda</a>
+      <a href="#about" class="block text-stone-700 hover:text-emerald-800 py-1">Tentang Kami</a>
+      <a href="#paket" class="block text-stone-700 hover:text-emerald-800 py-1">Pilihan Paket</a>
+      <a href="#jadwal" class="block text-stone-700 hover:text-emerald-800 py-1">Jadwal Keberangkatan</a>
+      <a href="#testimoni" class="block text-stone-700 hover:text-emerald-800 py-1">Testimoni Jemaah</a>
+      <a href="#galeri" class="block text-stone-700 hover:text-emerald-800 py-1">Galeri &amp; Video Cinematic</a>
+      <a href="#paket" class="block text-center py-2.5 rounded-xl bg-emerald-800 text-white font-bold shadow mt-2">Booking Paket</a>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-pattern text-white py-20 lg:py-28 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 bg-emerald-900/90 border border-emerald-700/60 text-amber-300 text-xs font-bold px-4 py-1.5 rounded-full shadow-inner">
+              <i class="fas fa-check-circle text-amber-400"></i> Izin Resmi Kemenag &bull; Bimbingan Sesuai Sunnah
+            </div>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
+              Wujudkan Kerinduan ke <span class="text-amber-400 font-arabic font-normal">Baitullah</span> dengan Rasa Tenang &amp; Khusyuk
+            </h1>
+            <p class="text-emerald-100 text-base sm:text-lg max-w-2xl leading-relaxed">
+              Layanan perjalanan ibadah Umroh &amp; Haji Khusus bintang 5 dengan hotel di pelataran Masjidil Haram, penerbangan direct tanpa transit, dan pembimbing berpengalaman.
+            </p>
+
+            <div class="flex flex-wrap gap-4 justify-center lg:justify-start pt-2">
+              <a href="#paket" class="px-7 py-3.5 rounded-2xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-stone-950 font-black text-sm shadow-xl transition flex items-center gap-2 transform hover:-translate-y-0.5">
+                <i class="fas fa-search"></i> Lihat Katalog Paket
+              </a>
+              <a href="#jadwal" class="px-7 py-3.5 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-sm backdrop-blur-md transition flex items-center gap-2">
+                <i class="far fa-calendar-alt text-amber-300"></i> Cek Jadwal 2026/2027
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Stats Cards -->
+          <div class="lg:col-span-5">
+            <div id="stats-container" class="grid grid-cols-2 gap-4">
+              <!-- Stats rendered dynamically -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 Pasti Umroh Section -->
+    <section id="about" class="py-16 bg-white border-b border-stone-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="text-emerald-800 font-bold text-xs uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">Komitmen Pelayanan</span>
+          <h2 class="text-3xl font-black text-stone-900 mt-3 mb-2">Gerakan 5 Pasti Umroh Kemenag</h2>
+          <p class="text-stone-600 text-sm leading-relaxed">Kami menjamin setiap jemaah mendapatkan kepastian hukum, kenyamanan, dan transparansi sejak pendaftaran hingga kembali ke tanah air.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div class="bg-stone-50 rounded-2xl p-6 border border-stone-100 hover-card text-center">
+            <div class="w-12 h-12 mx-auto rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-xl mb-4">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <h3 class="font-bold text-stone-900 text-sm mb-1">1. Pasti Travelnya</h3>
+            <p class="text-xs text-stone-500 leading-relaxed">Berizin resmi PPIU &amp; PIHK aktif Kementerian Agama RI.</p>
+          </div>
+          <div class="bg-stone-50 rounded-2xl p-6 border border-stone-100 hover-card text-center">
+            <div class="w-12 h-12 mx-auto rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-xl mb-4">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+            <h3 class="font-bold text-stone-900 text-sm mb-1">2. Pasti Jadwalnya</h3>
+            <p class="text-xs text-stone-500 leading-relaxed">Tanggal berangkat dan kepulangan fix sesuai jadwal rilis.</p>
+          </div>
+          <div class="bg-stone-50 rounded-2xl p-6 border border-stone-100 hover-card text-center">
+            <div class="w-12 h-12 mx-auto rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-xl mb-4">
+              <i class="fas fa-plane-departure"></i>
+            </div>
+            <h3 class="font-bold text-stone-900 text-sm mb-1">3. Pasti Terbangnya</h3>
+            <p class="text-xs text-stone-500 leading-relaxed">Tiket pesawat PP langsung diblokir dan terkonfirmasi maskapai.</p>
+          </div>
+          <div class="bg-stone-50 rounded-2xl p-6 border border-stone-100 hover-card text-center">
+            <div class="w-12 h-12 mx-auto rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-xl mb-4">
+              <i class="fas fa-hotel"></i>
+            </div>
+            <h3 class="font-bold text-stone-900 text-sm mb-1">4. Pasti Hotelnya</h3>
+            <p class="text-xs text-stone-500 leading-relaxed">Hotel bintang 5 di pelataran Makkah &amp; Madinah sesuai kontrak.</p>
+          </div>
+          <div class="bg-stone-50 rounded-2xl p-6 border border-stone-100 hover-card text-center">
+            <div class="w-12 h-12 mx-auto rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-xl mb-4">
+              <i class="fas fa-passport"></i>
+            </div>
+            <h3 class="font-bold text-stone-900 text-sm mb-1">5. Pasti Visanya</h3>
+            <p class="text-xs text-stone-500 leading-relaxed">Visa Umroh/Haji resmi Kerajaan Arab Saudi diterbitkan legal.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Katalog Paket Umroh & Haji -->
+    <section id="paket" class="py-20 bg-stone-100/70">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+          <div>
+            <span class="text-emerald-800 font-bold text-xs uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">Pilihan Ibadah</span>
+            <h2 class="text-3xl font-black text-stone-900 mt-2">Paket Pilihan Umroh &amp; Haji 1448 H</h2>
+            <p class="text-stone-600 text-sm mt-1">Pilih paket ibadah yang sesuai dengan kenyamanan dan kebutuhan keluarga Anda.</p>
+          </div>
+          
+          <!-- Category Filter Tabs -->
+          <div class="flex flex-wrap gap-2">
+            <button class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition shadow-sm bg-emerald-800 text-white" data-category="all">Semua</button>
+            <button class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition shadow-sm bg-white text-stone-700 hover:bg-stone-50" data-category="reguler">Umroh Reguler</button>
+            <button class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition shadow-sm bg-white text-stone-700 hover:bg-stone-50" data-category="plus">Umroh Plus Wisata</button>
+            <button class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition shadow-sm bg-white text-stone-700 hover:bg-stone-50" data-category="ramadhan">Spesial Ramadhan</button>
+            <button class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition shadow-sm bg-white text-stone-700 hover:bg-stone-50" data-category="haji">Haji Khusus Furoda</button>
+          </div>
+        </div>
+
+        <!-- Package Cards Container -->
+        <div id="packages-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Jadwal Keberangkatan Section -->
+    <section id="jadwal" class="py-20 bg-white border-b border-stone-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="text-emerald-800 font-bold text-xs uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">Ketersediaan Seat</span>
+          <h2 class="text-3xl font-black text-stone-900 mt-3 mb-2">Jadwal Keberangkatan Mendatang</h2>
+          <p class="text-stone-600 text-sm">Pantau sisa kuota jemaah secara real-time. Amankan kursi Anda sebelum kehabisan.</p>
+        </div>
+
+        <div class="overflow-x-auto bg-stone-50 rounded-3xl border border-stone-200 shadow-sm">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-emerald-950 text-white text-xs uppercase tracking-wider font-bold">
+                <th class="py-4 px-4 rounded-tl-3xl">Program Paket</th>
+                <th class="py-4 px-4">Tanggal Berangkat - Pulang</th>
+                <th class="py-4 px-4 text-center">Status Kuota</th>
+                <th class="py-4 px-4 text-right">Mulai Dari</th>
+                <th class="py-4 px-4 text-center rounded-tr-3xl">Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="schedule-body">
+              <!-- Rendered dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimoni Jemaah Section -->
+    <section id="testimoni" class="py-20 bg-stone-100/70">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="text-emerald-800 font-bold text-xs uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">Kisah Jemaah</span>
+          <h2 class="text-3xl font-black text-stone-900 mt-3 mb-2">Testimoni Nyata Tamu Allah</h2>
+          <p class="text-stone-600 text-sm">Pengalaman tulus dan doa dari para jemaah yang telah menunaikan ibadah bersama kami.</p>
+        </div>
+
+        <div id="testimonials-container" class="grid md:grid-cols-3 gap-8">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeri & Video Cinematic Section -->
+    <section id="galeri" class="py-20 bg-stone-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Cinematic Video Heading -->
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="text-amber-400 font-bold text-xs uppercase tracking-widest bg-white/10 px-3 py-1 rounded-full border border-white/20">Dokumentasi Visual</span>
+          <h2 class="text-3xl font-black text-white mt-3 mb-2">Video Cinematic &amp; Suasana Ibadah</h2>
+          <p class="text-stone-400 text-sm">Saksikan rekaman video cinematic perjalanan spiritual jemaah di Makkah dan Madinah.</p>
+        </div>
+
+        <!-- Videos Grid -->
+        <div id="videos-container" class="grid md:grid-cols-3 gap-8 mb-20">
+          <!-- Rendered dynamically -->
+        </div>
+
+        <!-- Photo Gallery Sub-section -->
+        <div class="border-t border-stone-800 pt-16">
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+            <div>
+              <h3 class="text-2xl font-bold text-white">Galeri Foto Dokumentasi</h3>
+              <p class="text-stone-400 text-xs mt-1">Momen bersejarah jemaah di Tanah Suci dan situs ziarah peradaban Islam.</p>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <button class="gallery-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold transition bg-emerald-800 text-white" data-category="all">Semua</button>
+              <button class="gallery-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold transition bg-white/10 text-stone-300 hover:bg-white/20" data-category="makkah">Makkah</button>
+              <button class="gallery-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold transition bg-white/10 text-stone-300 hover:bg-white/20" data-category="madinah">Madinah</button>
+              <button class="gallery-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold transition bg-white/10 text-stone-300 hover:bg-white/20" data-category="turki">Wisata Turki</button>
+            </div>
+          </div>
+
+          <div id="gallery-container" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-emerald-950 text-white border-t border-emerald-900 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-10">
+      <div class="space-y-4 md:col-span-1">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-amber-500 text-stone-900 flex items-center justify-center text-lg font-bold">
+            <i class="fas fa-kaaba"></i>
+          </div>
+          <span class="travel-name font-black text-xl text-white">Al-Barakah Travel</span>
+        </div>
+        <p class="text-xs text-emerald-200 leading-relaxed travel-tagline">
+          Melayani Tamu Allah dengan Amanah, Khusyuk, dan Nyaman.
+        </p>
+        <div class="text-[11px] text-amber-300 bg-emerald-900/60 p-3 rounded-xl border border-emerald-800 leading-tight">
+          <strong>Izin Resmi Kemenag RI:</strong><br>
+          <span class="travel-license">PPIU No. U.384 / 2021 &amp; PIHK No. 128 / 2023</span>
+        </div>
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="text-sm font-bold text-amber-400 uppercase tracking-wider">Navigasi Cepat</h4>
+        <ul class="space-y-2 text-xs text-emerald-200">
+          <li><a href="#home" class="hover:text-white transition">Beranda Utama</a></li>
+          <li><a href="#about" class="hover:text-white transition">Komitmen 5 Pasti Umroh</a></li>
+          <li><a href="#paket" class="hover:text-white transition">Katalog Paket Ibadah</a></li>
+          <li><a href="#jadwal" class="hover:text-white transition">Cek Kuota &amp; Jadwal</a></li>
+          <li><a href="#testimoni" class="hover:text-white transition">Kisah &amp; Review Jemaah</a></li>
+        </ul>
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="text-sm font-bold text-amber-400 uppercase tracking-wider">Kontak &amp; Kantor</h4>
+        <ul class="space-y-2 text-xs text-emerald-200">
+          <li class="flex items-start gap-2">
+            <i class="fas fa-map-marker-alt text-amber-400 mt-1"></i>
+            <span class="travel-address">Jl. Tebet Raya No. 45, Jakarta Selatan 12810</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fas fa-phone-alt text-amber-400"></i>
+            <span class="travel-phone">+62 812-3456-7890</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fas fa-envelope text-amber-400"></i>
+            <span class="travel-email">info@albarakah-travel.co.id</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="text-sm font-bold text-amber-400 uppercase tracking-wider">Metode Pembayaran</h4>
+        <p class="text-xs text-emerald-200">Pembayaran aman melalui rekening giro resmi atas nama perusahaan (Virtual Account Bank Syariah):</p>
+        <div class="flex flex-wrap gap-2 pt-1">
+          <span class="bg-white text-stone-900 text-[10px] font-bold px-2 py-1 rounded">Bank Syariah Indonesia</span>
+          <span class="bg-white text-stone-900 text-[10px] font-bold px-2 py-1 rounded">Bank Muamalat</span>
+          <span class="bg-white text-stone-900 text-[10px] font-bold px-2 py-1 rounded">BCA Syariah</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-emerald-900/80 text-center text-xs text-emerald-400">
+      &copy; 2026 <span class="travel-name">Al-Barakah Travel Umroh &amp; Haji</span>. Seluruh Hak Cipta Dilindungi Undang-Undang.
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/6281234567890?text=Assalamu'alaikum%20Admin%20Travel,%20saya%20ingin%20konsultasi%20paket%20Umroh%20/%20Haji" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 bg-emerald-600 hover:bg-emerald-700 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl pulse-subtle hover:scale-110 transition" title="Chat WhatsApp Admin">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Detail Modal -->
+  <div id="detail-modal" class="fixed inset-0 z-50 modal-backdrop hidden items-center justify-center p-4">
+    <div id="detail-modal-content" class="bg-white rounded-3xl max-w-2xl w-full shadow-2xl overflow-hidden flex flex-col">
+      <!-- Filled dynamically -->
+    </div>
+  </div>
+
+  <!-- Booking / Order Modal -->
+  <div id="booking-modal" class="fixed inset-0 z-50 modal-backdrop hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-xl w-full shadow-2xl overflow-hidden flex flex-col">
+      <div class="bg-emerald-950 text-white p-6 flex justify-between items-center">
+        <div>
+          <h3 class="text-xl font-bold">Formulir Order &amp; Booking Paket</h3>
+          <p class="text-xs text-emerald-300 mt-0.5">Lengkapi data pemesanan untuk langsung terhubung dengan admin via WhatsApp.</p>
+        </div>
+        <button id="btn-close-booking" class="text-stone-400 hover:text-white text-xl"><i class="fas fa-times"></i></button>
+      </div>
+
+      <form id="order-form" class="p-6 space-y-4 max-h-[75vh] overflow-y-auto">
+        <div>
+          <label class="block text-xs font-bold text-stone-700 uppercase mb-1">Pilihan Paket Ibadah</label>
+          <select id="booking-package-select" class="w-full p-3 rounded-xl border border-stone-300 text-sm font-semibold bg-stone-50 focus:ring-2 focus:ring-emerald-700 focus:outline-none"></select>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-stone-700 uppercase mb-1">Tipe Kamar</label>
+            <select id="booking-room-type" class="w-full p-3 rounded-xl border border-stone-300 text-sm font-semibold bg-stone-50 focus:ring-2 focus:ring-emerald-700 focus:outline-none">
+              <option value="quad">Quad (4 Orang / Kamar)</option>
+              <option value="triple">Triple (3 Orang / Kamar)</option>
+              <option value="double">Double (2 Orang / Kamar)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-stone-700 uppercase mb-1">Jumlah Jemaah</label>
+            <input type="number" id="booking-pilgrim-count" min="1" max="20" value="1" class="w-full p-3 rounded-xl border border-stone-300 text-sm font-semibold bg-stone-50 focus:ring-2 focus:ring-emerald-700 focus:outline-none">
+          </div>
+        </div>
+
+        <!-- Dynamic Calculator Summary -->
+        <div class="bg-emerald-50 rounded-2xl p-4 border border-emerald-200 text-xs">
+          <div class="flex justify-between items-center text-stone-600 mb-1">
+            <span>Harga per Pax:</span>
+            <span id="calc-price-pax" class="font-bold text-stone-800">Rp 0</span>
+          </div>
+          <div class="flex justify-between items-center text-sm font-black text-emerald-950 pt-2 border-t border-emerald-200">
+            <span>Estimasi Total:</span>
+            <span id="calc-total" class="text-lg font-arabic text-emerald-900">Rp 0</span>
+          </div>
+        </div>
+
+        <div class="space-y-3 pt-2">
+          <div>
+            <label class="block text-xs font-bold text-stone-700 uppercase mb-1">Nama Lengkap Pemesan *</label>
+            <input type="text" id="order-name" placeholder="Contoh: H. Ahmad Subarjo" required class="w-full p-3 rounded-xl border border-stone-300 text-sm focus:ring-2 focus:ring-emerald-700 focus:outline-none">
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-bold text-stone-700 uppercase mb-1">No. WhatsApp Aktif *</label>
+              <input type="tel" id="order-phone" placeholder="08123456789" required class="w-full p-3 rounded-xl border border-stone-300 text-sm focus:ring-2 focus:ring-emerald-700 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-stone-700 uppercase mb-1">Kota Domisili</label>
+              <input type="text" id="order-city" placeholder="Jakarta / Surabaya" class="w-full p-3 rounded-xl border border-stone-300 text-sm focus:ring-2 focus:ring-emerald-700 focus:outline-none">
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-stone-700 uppercase mb-1">Catatan Khusus / Pertanyaan</label>
+            <textarea id="order-notes" rows="2" placeholder="Contoh: Membawa jemaah lansia membutuhkan kursi roda..." class="w-full p-3 rounded-xl border border-stone-300 text-sm focus:ring-2 focus:ring-emerald-700 focus:outline-none"></textarea>
+          </div>
+        </div>
+
+        <div class="pt-4">
+          <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-emerald-800 to-emerald-950 text-white font-bold text-sm hover:from-emerald-900 hover:to-black transition shadow-lg flex items-center justify-center gap-2">
+            <i class="fab fa-whatsapp text-lg text-emerald-400"></i> Kirim Booking via WhatsApp Resmi
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Video Modal -->
+  <div id="video-modal" class="fixed inset-0 z-50 modal-backdrop hidden items-center justify-center p-4">
+    <div class="bg-black rounded-3xl max-w-3xl w-full shadow-2xl overflow-hidden flex flex-col">
+      <div class="p-4 flex justify-between items-center text-white border-b border-stone-800">
+        <h4 id="video-modal-title" class="text-sm font-bold line-clamp-1">Video Preview</h4>
+        <button id="btn-close-video" class="text-stone-400 hover:text-white text-lg px-2"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="relative pb-[56.25%] h-0 bg-black">
+        <iframe id="video-modal-frame" class="absolute top-0 left-0 w-full h-full" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
