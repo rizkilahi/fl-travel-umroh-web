@@ -15,7 +15,7 @@ Assalamu'alaikum Wr. Wb. Kak Senorita,
 
 Kunci website travel Umroh & Haji yang sukses adalah membangun kepercayaan jemaah (trust & legalitas) serta kemudahan memilih paket dan langsung booking tanpa alur yang berbelit-belit.
 
-Saya telah merancang arsitektur dan prototipe fungsional untuk memenuhi 5 halaman/kebutuhan utama yang Kakak sebutkan:
+Saya telah merancang arsitektur dan prototipe fungsional (bisa langsung dicoba live di: https://rizkilahi.github.io/fl-travel-umroh-web/ ) untuk memenuhi 5 halaman/kebutuhan utama yang Kakak sebutkan:
 
 1. **Homepage & Legalitas Travel:**
    - Header izin resmi PPIU/PIHK Kementerian Agama RI & integrasi 5 Pasti Umroh Kemenag.

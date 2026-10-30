@@ -4,6 +4,8 @@
 - **Proyek Asal:** [Pembuatan Website Travel Umroh Haji](https://projects.co.id/public/browse_projects/view/19631d/pembuatan-website-travel-umroh-haji)
 - **Owner:** `senorita`
 - **Status Saat Ini:** `PROTOTYPE_READY` & `BID_READY`
+- **Live Demo:** [https://rizkilahi.github.io/fl-travel-umroh-web/](https://rizkilahi.github.io/fl-travel-umroh-web/)
+- **Repository:** [https://github.com/rizkilahi/fl-travel-umroh-web](https://github.com/rizkilahi/fl-travel-umroh-web)
 - **Jalur Eksekusi:** Jalur Cepat Lead (Zero-build Modern Web App)
 
 ## Checklist Fitur & Acceptance Criteria (AC)
