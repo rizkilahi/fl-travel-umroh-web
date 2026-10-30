@@ -32,66 +32,101 @@
 <body class="bg-stone-50 text-stone-800 antialiased flex flex-col min-h-screen">
 
   <!-- Top Banner Legalitas -->
-  <div class="bg-emerald-950 text-emerald-200 text-xs py-2 px-4 border-b border-emerald-900">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-      <div class="flex items-center gap-2 text-center sm:text-left">
-        <span class="bg-amber-500 text-stone-900 font-bold px-2 py-0.5 rounded text-[10px] uppercase">Resmi Kemenag RI</span>
-        <span class="travel-license font-medium">PPIU No. U.384 / 2021 &amp; PIHK No. 128 / 2023</span>
+  <div class="bg-emerald-950 text-emerald-200 text-xs py-1.5 px-4 border-b border-emerald-900/80">
+    <div class="max-w-7xl mx-auto flex justify-between items-center text-[11px] sm:text-xs">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center gap-1 bg-amber-500 text-stone-950 font-black px-2 py-0.5 rounded text-[10px] tracking-wide uppercase shadow-sm">
+          <i class="fas fa-check-circle text-[9px]"></i> Resmi Kemenag
+        </span>
+        <span class="travel-license font-medium text-emerald-100 hidden sm:inline">PPIU No. U.384/2021 &bull; PIHK No. 128/2023</span>
+        <span class="travel-license font-medium text-emerald-100 sm:hidden">PPIU &amp; PIHK Resmi</span>
       </div>
-      <div class="flex items-center gap-4 text-xs font-semibold">
-        <a href="tel:+6281234567890" class="hover:text-amber-400 transition"><i class="fas fa-phone-alt mr-1 text-amber-400"></i> <span class="travel-phone">+62 812-3456-7890</span></a>
-        <span class="hidden md:inline">|</span>
-        <span class="hidden md:inline"><i class="fas fa-shield-alt mr-1 text-amber-400"></i> 5 Pasti Umroh Terjamin</span>
+      <div class="flex items-center gap-3 font-semibold">
+        <a href="https://wa.me/6281234567890" target="_blank" class="hover:text-amber-300 transition flex items-center gap-1.5 text-emerald-100">
+          <i class="fab fa-whatsapp text-emerald-400 text-sm"></i> <span class="hidden sm:inline">Konsultasi:</span> <span class="travel-phone font-bold">+62 812-3456-7890</span>
+        </a>
+        <span class="hidden md:inline text-emerald-700">|</span>
+        <span class="hidden md:inline text-emerald-300"><i class="fas fa-shield-halved text-amber-400 mr-1"></i> 5 Pasti Umroh</span>
       </div>
     </div>
   </div>
 
   <!-- Header Navigation -->
-  <header class="sticky top-0 z-40 glass-header border-b border-stone-200/80 shadow-sm transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-stone-200/80 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between">
       <!-- Logo -->
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-emerald-800 to-emerald-950 flex items-center justify-center text-amber-400 shadow-md group-hover:scale-105 transition">
-          <i class="fas fa-kaaba text-xl"></i>
+      <a href="#" class="flex items-center gap-3 group focus:outline-none">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-br from-emerald-800 to-emerald-950 flex items-center justify-center text-amber-400 shadow-md group-hover:scale-105 transition-transform duration-200">
+          <i class="fas fa-kaaba text-lg sm:text-xl"></i>
         </div>
         <div>
-          <span class="travel-name block font-black text-xl text-emerald-950 tracking-tight leading-none">Al-Barakah Travel</span>
-          <span class="text-[11px] font-semibold text-amber-600 uppercase tracking-widest leading-tight">Umroh &amp; Haji Khusus</span>
+          <span class="travel-name block font-black text-lg sm:text-xl text-emerald-950 tracking-tight leading-none">Al-Barakah Travel</span>
+          <span class="text-[10px] sm:text-[11px] font-bold text-amber-600 uppercase tracking-widest block leading-none mt-1">Umroh &amp; Haji Khusus</span>
         </div>
       </a>
 
       <!-- Desktop Nav -->
-      <nav class="hidden lg:flex items-center gap-8 font-semibold text-sm text-stone-600">
-        <a href="#home" class="hover:text-emerald-800 transition py-1">Beranda</a>
-        <a href="#about" class="hover:text-emerald-800 transition py-1">Tentang Kami</a>
-        <a href="#paket" class="hover:text-emerald-800 transition py-1">Pilihan Paket</a>
-        <a href="#jadwal" class="hover:text-emerald-800 transition py-1">Jadwal Keberangkatan</a>
-        <a href="#testimoni" class="hover:text-emerald-800 transition py-1">Testimoni</a>
-        <a href="#galeri" class="hover:text-emerald-800 transition py-1">Galeri &amp; Video</a>
+      <nav class="hidden lg:flex items-center gap-1 xl:gap-2 font-semibold text-sm">
+        <a href="#home" class="px-3.5 py-2 rounded-xl text-stone-600 hover:text-emerald-900 hover:bg-emerald-50 transition-all">Beranda</a>
+        <a href="#about" class="px-3.5 py-2 rounded-xl text-stone-600 hover:text-emerald-900 hover:bg-emerald-50 transition-all">Tentang Kami</a>
+        <a href="#paket" class="px-3.5 py-2 rounded-xl text-stone-600 hover:text-emerald-900 hover:bg-emerald-50 transition-all">Pilihan Paket</a>
+        <a href="#jadwal" class="px-3.5 py-2 rounded-xl text-stone-600 hover:text-emerald-900 hover:bg-emerald-50 transition-all">Jadwal Keberangkatan</a>
+        <a href="#testimoni" class="px-3.5 py-2 rounded-xl text-stone-600 hover:text-emerald-900 hover:bg-emerald-50 transition-all">Testimoni</a>
+        <a href="#galeri" class="px-3.5 py-2 rounded-xl text-stone-600 hover:text-emerald-900 hover:bg-emerald-50 transition-all">Galeri &amp; Video</a>
       </nav>
 
       <!-- CTA Button -->
       <div class="hidden lg:flex items-center gap-3">
-        <a href="#paket" class="px-5 py-2.5 rounded-xl bg-emerald-800 hover:bg-emerald-900 text-white font-bold text-sm shadow-md hover:shadow-lg transition flex items-center gap-2">
+        <a href="#paket" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-800 to-emerald-900 hover:from-emerald-900 hover:to-emerald-950 text-white font-bold text-sm shadow-md hover:shadow-lg transition-all flex items-center gap-2 border border-emerald-700/30">
           <i class="fas fa-ticket-alt text-amber-400"></i> Booking Sekarang
         </a>
       </div>
 
-      <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn" class="lg:hidden text-stone-700 hover:text-emerald-900 text-2xl p-2 focus:outline-none">
-        <i class="fas fa-bars"></i>
-      </button>
+      <!-- Mobile Quick Actions -->
+      <div class="flex items-center gap-2 lg:hidden">
+        <a href="#paket" class="px-3 py-1.5 rounded-lg bg-emerald-800 text-white text-xs font-bold flex items-center gap-1 shadow-sm">
+          <i class="fas fa-ticket-alt text-amber-400 text-[10px]"></i> Booking
+        </a>
+        <button id="mobile-menu-btn" class="w-9 h-9 flex items-center justify-center rounded-xl bg-stone-100 hover:bg-emerald-50 text-stone-700 hover:text-emerald-900 border border-stone-200 transition focus:outline-none" aria-label="Toggle menu">
+          <i class="fas fa-bars text-base"></i>
+        </button>
+      </div>
     </div>
 
     <!-- Mobile Nav Dropdown -->
-    <div id="mobile-nav" class="hidden lg:hidden bg-white border-b border-stone-200 px-6 py-4 space-y-3 font-semibold text-sm shadow-xl">
-      <a href="#home" class="block text-stone-700 hover:text-emerald-800 py-1">Beranda</a>
-      <a href="#about" class="block text-stone-700 hover:text-emerald-800 py-1">Tentang Kami</a>
-      <a href="#paket" class="block text-stone-700 hover:text-emerald-800 py-1">Pilihan Paket</a>
-      <a href="#jadwal" class="block text-stone-700 hover:text-emerald-800 py-1">Jadwal Keberangkatan</a>
-      <a href="#testimoni" class="block text-stone-700 hover:text-emerald-800 py-1">Testimoni Jemaah</a>
-      <a href="#galeri" class="block text-stone-700 hover:text-emerald-800 py-1">Galeri &amp; Video Cinematic</a>
-      <a href="#paket" class="block text-center py-2.5 rounded-xl bg-emerald-800 text-white font-bold shadow mt-2">Booking Paket</a>
+    <div id="mobile-nav" class="hidden lg:hidden bg-white/98 backdrop-blur-xl border-b border-stone-200 px-4 py-3 space-y-1 font-semibold text-sm shadow-2xl transition-all">
+      <a href="#home" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-stone-700 hover:text-emerald-900 hover:bg-emerald-50 transition">
+        <div class="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center text-xs"><i class="fas fa-home"></i></div>
+        <span>Beranda</span>
+      </a>
+      <a href="#about" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-stone-700 hover:text-emerald-900 hover:bg-emerald-50 transition">
+        <div class="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center text-xs"><i class="fas fa-mosque"></i></div>
+        <span>Tentang Kami &amp; Legalitas</span>
+      </a>
+      <a href="#paket" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-stone-700 hover:text-emerald-900 hover:bg-emerald-50 transition">
+        <div class="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center text-xs"><i class="fas fa-box-open"></i></div>
+        <span>Pilihan Paket Ibadah</span>
+      </a>
+      <a href="#jadwal" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-stone-700 hover:text-emerald-900 hover:bg-emerald-50 transition">
+        <div class="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center text-xs"><i class="fas fa-calendar-alt"></i></div>
+        <span>Jadwal Keberangkatan</span>
+      </a>
+      <a href="#testimoni" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-stone-700 hover:text-emerald-900 hover:bg-emerald-50 transition">
+        <div class="w-7 h-7 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center text-xs"><i class="fas fa-star"></i></div>
+        <span>Testimoni Jemaah</span>
+      </a>
+      <a href="#galeri" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-stone-700 hover:text-emerald-900 hover:bg-emerald-50 transition">
+        <div class="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center text-xs"><i class="fas fa-video"></i></div>
+        <span>Galeri Foto &amp; Video</span>
+      </a>
+      <div class="pt-2 border-t border-stone-100 grid grid-cols-2 gap-2 mt-2">
+        <a href="#paket" class="text-center py-2.5 rounded-xl bg-emerald-800 text-white font-bold text-xs shadow flex items-center justify-center gap-1.5">
+          <i class="fas fa-ticket-alt text-amber-400"></i> Pilih Paket
+        </a>
+        <a href="https://wa.me/6281234567890?text=Halo%20Al-Barakah%20Travel,%20saya%20ingin%20tanya%20paket%20umroh" target="_blank" class="text-center py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow flex items-center justify-center gap-1.5">
+          <i class="fab fa-whatsapp text-white text-sm"></i> Chat WA
+        </a>
+      </div>
     </div>
   </header>
 

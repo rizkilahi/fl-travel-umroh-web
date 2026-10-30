@@ -42,6 +42,41 @@ function initHeaderAndProfile() {
   }
 }
 
+export function getBadgeConfig(badgeName) {
+  switch (badgeName) {
+    case 'Paling Populer':
+      return {
+        cardBadge: 'bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-stone-950 font-black shadow-md shadow-amber-500/30 border border-amber-200/90',
+        modalBadge: 'bg-gradient-to-r from-amber-400 to-amber-500 text-stone-950 font-black shadow-sm',
+        icon: 'fas fa-fire'
+      };
+    case 'Best Seller':
+      return {
+        cardBadge: 'bg-gradient-to-r from-sky-500 via-blue-600 to-indigo-600 text-white font-black shadow-md shadow-blue-500/30 border border-sky-300/60',
+        modalBadge: 'bg-gradient-to-r from-sky-500 to-blue-600 text-white font-black shadow-sm',
+        icon: 'fas fa-award'
+      };
+    case 'Tanpa Antri':
+      return {
+        cardBadge: 'bg-gradient-to-r from-purple-600 via-purple-700 to-indigo-800 text-white font-black shadow-md shadow-purple-600/30 border border-purple-300/60',
+        modalBadge: 'bg-gradient-to-r from-purple-600 to-indigo-700 text-white font-black shadow-sm',
+        icon: 'fas fa-bolt'
+      };
+    case 'Edisi Khusus':
+      return {
+        cardBadge: 'bg-gradient-to-r from-emerald-600 via-emerald-700 to-teal-800 text-white font-black shadow-md shadow-emerald-600/30 border border-emerald-300/60',
+        modalBadge: 'bg-gradient-to-r from-emerald-600 to-teal-700 text-white font-black shadow-sm',
+        icon: 'fas fa-moon'
+      };
+    default:
+      return {
+        cardBadge: 'bg-emerald-900/90 text-amber-300 font-bold border border-amber-400/40',
+        modalBadge: 'bg-emerald-800 text-amber-300 font-bold',
+        icon: 'fas fa-star'
+      };
+  }
+}
+
 function renderPackages() {
   const container = document.getElementById('packages-container');
   if (!container) return;
@@ -50,12 +85,14 @@ function renderPackages() {
     ? PACKAGES 
     : PACKAGES.filter(p => p.category === currentCategory);
 
-  container.innerHTML = filtered.map(pkg => `
+  container.innerHTML = filtered.map(pkg => {
+    const badge = getBadgeConfig(pkg.badge);
+    return `
     <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover-card border border-stone-100 flex flex-col">
       <div class="relative h-60 overflow-hidden">
         <img src="${pkg.image}" alt="${pkg.name}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
-        <div class="absolute top-4 left-4 bg-emerald-900/80 backdrop-blur-md text-amber-400 text-xs font-bold px-3 py-1.5 rounded-full border border-amber-400/30 flex items-center gap-1.5">
-          <i class="fas fa-star text-xs"></i> ${pkg.badge}
+        <div class="absolute top-4 left-4 ${badge.cardBadge} text-xs px-3.5 py-1.5 rounded-full flex items-center gap-1.5 tracking-wide backdrop-blur-md">
+          <i class="${badge.icon} text-xs"></i> <span>${pkg.badge}</span>
         </div>
         <div class="absolute bottom-3 right-3 bg-stone-900/80 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-lg">
           <i class="far fa-clock"></i> ${pkg.duration}
@@ -95,7 +132,8 @@ function renderPackages() {
         </div>
       </div>
     </div>
-  `).join('');
+    `;
+  }).join('');
 
   // Bind package buttons
   container.querySelectorAll('.btn-detail').forEach(btn => {
@@ -233,11 +271,14 @@ function openPackageDetail(pkgId) {
   const content = document.getElementById('detail-modal-content');
   if (!modal || !content) return;
 
+  const badge = getBadgeConfig(pkg.badge);
   content.innerHTML = `
     <div class="relative h-64 overflow-hidden rounded-t-3xl">
       <img src="${pkg.image}" alt="${pkg.name}" class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-6 text-white">
-        <span class="bg-amber-500 text-stone-900 text-xs font-bold px-3 py-1 rounded-full w-max mb-2">${pkg.badge}</span>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent flex flex-col justify-end p-6 text-white">
+        <span class="${badge.modalBadge} text-xs font-bold px-3.5 py-1 rounded-full w-max mb-2 flex items-center gap-1.5 border border-white/20">
+          <i class="${badge.icon}"></i> ${pkg.badge}
+        </span>
         <h3 class="text-2xl font-black">${pkg.name}</h3>
         <div class="text-xs text-stone-300"><i class="far fa-clock mr-1"></i> Durasi Perjalanan: ${pkg.duration}</div>
       </div>
